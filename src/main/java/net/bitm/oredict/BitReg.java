@@ -17,6 +17,7 @@ public class BitReg {
 		OreDictionary.registerOre("machineblock", bonytechmod.machineblock);
         OreDictionary.registerOre("blockNyt", bonytechmod.nytblock);
         OreDictionary.registerOre("blockVice", bonytechmod.viceblock);
+        OreDictionary.registerOre("foodCakeChocolate", bonytechmod.choclateCake);
         
         OreDictionary.registerOre("gemNyt", bonytechmod.nyt);
 		OreDictionary.registerOre("gemVice", bonytechmod.vice);

@@ -85,5 +85,10 @@ public class shapedrecipes {
 			" e ",
 			"eee",
 			" e ", 'e', "gemEmerald"}));
+		
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(bonytechmod.choclateCake), new Object[]{
+		"bbb", 
+		"bcb",
+		"bbb", 'c', "foodCake", 'b', "dyeBrown"})); //Why any dye? Because people eat weird shit
 	}
 }

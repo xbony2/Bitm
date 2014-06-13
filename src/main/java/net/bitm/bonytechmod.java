@@ -1,5 +1,6 @@
 package net.bitm;
 
+import net.bitm.blocks.ChoclateCake;
 import net.bitm.blocks.TileEntityIronFurnace;
 import net.bitm.blocks.TileEntityNytFurnace;
 import net.bitm.blocks.TileEntityNytTrit;
@@ -63,17 +64,14 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
-import net.minecraft.stats.AchievementList;
 import net.minecraftforge.common.AchievementPage;
 import net.minecraftforge.common.util.EnumHelper;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
-import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -156,6 +154,7 @@ public class bonytechmod {
 	public static Block furnaceironactive;
 	public static Block tritnytidle;
 	public static Block tritnytactive;
+	public static Block choclateCake;
 	
 	public static ToolMaterial toolMaterialNyt;
 	public static ToolMaterial toolMaterialVice;
@@ -298,6 +297,7 @@ public class bonytechmod {
 		machineblock = new machineblock(Material.rock);
 		irongravel = new irongravel(Material.sand);
 		clearglass = new clearglass(Material.glass);
+		choclateCake = new ChoclateCake(Material.cake);
 		
 		furnacenytidle = new furnacenyt(false).setCreativeTab(defaultsettings.alternetcreativemenuonoff == 1 ? creativeTab.bonetabMachines : CreativeTabs.tabDecorations).setHardness(3.5F).setResistance(5F).setBlockName("furnacenytidle");
 		furnacenytactive = new furnacenyt(true).setLightLevel(1).setHardness(3.5F).setResistance(5F).setBlockName("furnacenytactive");
@@ -320,6 +320,7 @@ public class bonytechmod {
 		GameRegistry.registerBlock(furnaceironactive, "furnaceironactive");
 		GameRegistry.registerBlock(tritnytidle, "tritnytidle");
 		GameRegistry.registerBlock(tritnytactive, "tritnytactive");
+		GameRegistry.registerBlock(choclateCake, "cakeChocalte");
 		
 		//Adds stuff to the vanilla Ore Dict
 		vanillaReg.registerVanillaOres();

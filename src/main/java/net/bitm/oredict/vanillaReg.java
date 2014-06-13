@@ -53,6 +53,7 @@ public class vanillaReg {
 	OreDictionary.registerOre("bottleEmpty", Items.glass_bottle);
 	OreDictionary.registerOre("itemNameTag", Items.name_tag);
 	OreDictionary.registerOre("gemQuartz", Items.quartz);
+	OreDictionary.registerOre("foodCake", Items.cake);
 	}
 	
 }

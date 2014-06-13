@@ -79,6 +79,7 @@ tile.irongravel.name=Ijzer Grind
 tile.clearglass.name=Helder Glas
 tile.furnaceironidle.name=Iron Furnace
 tile.tritnytidle.name=Nytrogenic Triturator
+tile.choclatecake.name=Chocolate Cake
 
 container.nytfurnace=Nytrogenic Fornuis
 container.ironfurnace=Iron Furnace
