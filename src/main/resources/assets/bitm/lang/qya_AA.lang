@@ -81,6 +81,7 @@ tile.clearglass.name=Clear Glass
 tile.furnaceironidle.name=Iron Furnace
 tile.tritnytidle.name=Nytrogenic Triturator
 tile.choclatecake.name=Chocolate Cake
+tile.coloredPlanks.name=Colored Planks
 
 container.nytfurnace=Nytrogenic Urna
 container.ironfurnace=Iron Furnace

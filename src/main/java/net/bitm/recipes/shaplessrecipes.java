@@ -21,27 +21,21 @@ public class shaplessrecipes {
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond, 5), new Object[]{
 			new ItemStack(bonytechmod.diamondbitcoin)});
-		/*
-		GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.redstonestick, 16), new Object[]{
-			new ItemStack(bonytechmod.stickcarver), new ItemStack(Blocks.redstone_block)});
-		
-		GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.lapisstick, 16), new Object[]{
-			new ItemStack(bonytechmod.stickcarver), new ItemStack(Blocks.lapis_block)});
-		
-		GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.quartzstick,16), new Object[]{
-			new ItemStack(bonytechmod.stickcarver), new ItemStack(Blocks.quartz_block)});
-		
-		GameRegistry.addShapelessRecipe(new ItemStack (bonytechmod.nytstick, 16), new Object[]{
-			new ItemStack(bonytechmod.stickcarver), new ItemStack(bonytechmod.nytblock)});
-		
-		GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.vicestick, 16), new Object[]{
-			new ItemStack(bonytechmod.stickcarver), new ItemStack(bonytechmod.viceblock)});*/
 		
 		GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.bonyiumingot, 2), new Object[]{
 			new ItemStack(Items.iron_ingot), new ItemStack(Items.bone), new ItemStack(Items.coal)});
 		//TEMP. RECIPE DOWN THERE
 		GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.irongravel), new Object[]{
 			new ItemStack(Items.iron_ingot), new ItemStack(Blocks.gravel)});
-       
+		
+		int time1 = 0;
+		int time2 = 15;
+		while(time1 <= 15){
+			GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.ColoredPlank, 1, time1), new Object[]{
+				new ItemStack(Blocks.planks), new ItemStack(Items.dye, 1, time2)});
+			time1++;
+			time2--;
+			
+		}
 	}
 }

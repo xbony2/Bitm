@@ -1,6 +1,7 @@
 package net.bitm;
 
 import net.bitm.blocks.ChoclateCake;
+import net.bitm.blocks.ColoredPlanks;
 import net.bitm.blocks.TileEntityIronFurnace;
 import net.bitm.blocks.TileEntityNytFurnace;
 import net.bitm.blocks.TileEntityNytTrit;
@@ -83,7 +84,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = "bitm", name = "BIT mod!", version = "1.1.0a") 
 //, dependencies = "required-after:IC2" (if needed later)
-public class bonytechmod {
+public class bonytechmod{
 	
 	@Instance("bitm")
 	public static bonytechmod instance;
@@ -155,6 +156,7 @@ public class bonytechmod {
 	public static Block tritnytidle;
 	public static Block tritnytactive;
 	public static Block choclateCake;
+	public static Block ColoredPlank;
 	
 	public static ToolMaterial toolMaterialNyt;
 	public static ToolMaterial toolMaterialVice;
@@ -298,6 +300,8 @@ public class bonytechmod {
 		irongravel = new irongravel(Material.sand);
 		clearglass = new clearglass(Material.glass);
 		choclateCake = new ChoclateCake(Material.cake);
+		ColoredPlank = new ColoredPlanks();
+		
 		
 		furnacenytidle = new furnacenyt(false).setCreativeTab(defaultsettings.alternetcreativemenuonoff == 1 ? creativeTab.bonetabMachines : CreativeTabs.tabDecorations).setHardness(3.5F).setResistance(5F).setBlockName("furnacenytidle");
 		furnacenytactive = new furnacenyt(true).setLightLevel(1).setHardness(3.5F).setResistance(5F).setBlockName("furnacenytactive");
@@ -321,6 +325,7 @@ public class bonytechmod {
 		GameRegistry.registerBlock(tritnytidle, "tritnytidle");
 		GameRegistry.registerBlock(tritnytactive, "tritnytactive");
 		GameRegistry.registerBlock(choclateCake, "cakeChocalte");
+		GameRegistry.registerBlock(ColoredPlank, "coloredPlanks");
 		
 		//Adds stuff to the vanilla Ore Dict
 		vanillaReg.registerVanillaOres();

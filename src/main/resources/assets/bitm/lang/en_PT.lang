@@ -81,6 +81,7 @@ tile.clearglass.name=Seein' Object
 tile.furnaceironidle.name=Steel Oven
 tile.tritnytidle.name=Nytrogenic Triturator
 tile.choclatecake.name=Chocolate Cake
+tile.coloredPlanks.name=Colored Planks
 
 container.nytfurnace=Oven
 container.ironfurnace=Steel Oven
