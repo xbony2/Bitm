@@ -1,0 +1,15 @@
+[{
+  "modid" : "bitm",
+  "name" : "Bitm!",
+  "version" : "1.1.0a",
+  "credits" : "xbony2, Piggilywiggily130, Azhdev, Scratchforfun",
+  "authors" : [
+      "xbony2" 
+     ],
+  "descripion" : "Bitm adds great technology, such as the nyrogenic triturator and nytrogenic furnace",
+  "url" : "",
+  "updateUrl" : "",
+  "logoFile" : "",
+  "parent" : "",
+  "screenshots" : []
+  }]   
