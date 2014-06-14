@@ -18,6 +18,22 @@ public class BitReg {
         OreDictionary.registerOre("blockNyt", bonytechmod.nytblock);
         OreDictionary.registerOre("blockVice", bonytechmod.viceblock);
         OreDictionary.registerOre("foodCakeChocolate", bonytechmod.choclateCake);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankBlack);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankBlue);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankBrown);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankCyan);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankGray);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankGreen);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankLightBlue);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankLightGray);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankLime);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankMagenta);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankOrange);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankPink);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankPurple);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankRed);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankWhite);
+        OreDictionary.registerOre("plankWood", bonytechmod.plankYellow);
         
         OreDictionary.registerOre("gemNyt", bonytechmod.nyt);
 		OreDictionary.registerOre("gemVice", bonytechmod.vice);

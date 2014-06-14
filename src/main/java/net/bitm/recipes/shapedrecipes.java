@@ -14,6 +14,9 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class shapedrecipes {
 	public static void registerrecipes(){
 		
+		toolrecipes.registerToolRecipes();
+		coloredplanksRec.registerRecipesPlanks();
+		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(bonytechmod.stickcarver), true, new Object[]{
 			"  q",
 			" q ",
@@ -23,8 +26,6 @@ public class shapedrecipes {
 			"q  ",
 			" q ",
 			"  s", 'q', "gemQuartz", 's', "stickWood"}));
-		
-		toolrecipes.registerToolRecipes();
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(bonytechmod.nytblock), new Object[]{
 		"nnn",

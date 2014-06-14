@@ -28,14 +28,7 @@ public class shaplessrecipes {
 		GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.irongravel), new Object[]{
 			new ItemStack(Items.iron_ingot), new ItemStack(Blocks.gravel)});
 		
-		int time1 = 0;
-		int time2 = 15;
-		while(time1 <= 15){
-			GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.ColoredPlank, 1, time1), new Object[]{
-				new ItemStack(Blocks.planks), new ItemStack(Items.dye, 1, time2)});
-			time1++;
-			time2--;
-			
-		}
+		
+		
 	}
 }

@@ -156,7 +156,22 @@ public class bonytechmod{
 	public static Block tritnytidle;
 	public static Block tritnytactive;
 	public static Block choclateCake;
-	public static Block ColoredPlank;
+	public static Block plankBlack;
+	public static Block plankBlue;
+	public static Block plankBrown;
+	public static Block plankCyan;
+	public static Block plankGray;
+	public static Block plankGreen;
+	public static Block plankLightBlue;
+	public static Block plankLightGray;
+	public static Block plankLime;
+	public static Block plankMagenta;
+	public static Block plankOrange;
+	public static Block plankPink;
+	public static Block plankPurple;
+	public static Block plankRed;
+	public static Block plankWhite;
+	public static Block plankYellow;
 	
 	public static ToolMaterial toolMaterialNyt;
 	public static ToolMaterial toolMaterialVice;
@@ -300,8 +315,22 @@ public class bonytechmod{
 		irongravel = new irongravel(Material.sand);
 		clearglass = new clearglass(Material.glass);
 		choclateCake = new ChoclateCake(Material.cake);
-		ColoredPlank = new ColoredPlanks();
-		
+		plankBlack = new ColoredPlanks().setBlockName("blackPlanks");
+		plankBlue = new ColoredPlanks().setBlockName("bluePlanks");
+		plankBrown = new ColoredPlanks().setBlockName("brownPlanks");
+		plankCyan = new ColoredPlanks().setBlockName("cyanPlanks");
+		plankGray = new ColoredPlanks().setBlockName("grayPlanks");
+		plankGreen = new ColoredPlanks().setBlockName("greenPlanks");
+		plankLightBlue = new ColoredPlanks().setBlockName("lightBluePlanks");
+		plankLightGray = new ColoredPlanks().setBlockName("lightGrayPlanks");
+		plankLime = new ColoredPlanks().setBlockName("limePlanks");
+		plankMagenta = new ColoredPlanks().setBlockName("magentaPlanks");
+		plankOrange = new ColoredPlanks().setBlockName("orangePlanks");
+		plankPink = new ColoredPlanks().setBlockName("pinkPlanks");
+		plankPurple = new ColoredPlanks().setBlockName("purplePlanks");
+		plankRed = new ColoredPlanks().setBlockName("redPlanks");
+		plankWhite = new ColoredPlanks().setBlockName("whitePlanks");
+		plankYellow = new ColoredPlanks().setBlockName("yellowPlanks");
 		
 		furnacenytidle = new furnacenyt(false).setCreativeTab(defaultsettings.alternetcreativemenuonoff == 1 ? creativeTab.bonetabMachines : CreativeTabs.tabDecorations).setHardness(3.5F).setResistance(5F).setBlockName("furnacenytidle");
 		furnacenytactive = new furnacenyt(true).setLightLevel(1).setHardness(3.5F).setResistance(5F).setBlockName("furnacenytactive");
@@ -325,7 +354,22 @@ public class bonytechmod{
 		GameRegistry.registerBlock(tritnytidle, "tritnytidle");
 		GameRegistry.registerBlock(tritnytactive, "tritnytactive");
 		GameRegistry.registerBlock(choclateCake, "cakeChocalte");
-		GameRegistry.registerBlock(ColoredPlank, "coloredPlanks");
+		GameRegistry.registerBlock(plankBlack, "plankBlack");
+		GameRegistry.registerBlock(plankBlue, "plankBlue");
+		GameRegistry.registerBlock(plankBrown, "plankBrown");
+		GameRegistry.registerBlock(plankCyan, "plankCyan");
+		GameRegistry.registerBlock(plankGray, "plankGray");
+		GameRegistry.registerBlock(plankGreen, "plankGreen");
+		GameRegistry.registerBlock(plankLightBlue, "plankLightBlue");
+		GameRegistry.registerBlock(plankLightGray, "plankLightGray");
+		GameRegistry.registerBlock(plankLime, "plankLime");
+		GameRegistry.registerBlock(plankMagenta, "plankMagenta");
+		GameRegistry.registerBlock(plankOrange, "plankOrange");
+		GameRegistry.registerBlock(plankPink, "plankPink");
+		GameRegistry.registerBlock(plankPurple, "plankPurple");
+		GameRegistry.registerBlock(plankRed, "plankRed");
+		GameRegistry.registerBlock(plankWhite, "plankWhite");
+		GameRegistry.registerBlock(plankYellow, "plankYellow");
 		
 		//Adds stuff to the vanilla Ore Dict
 		vanillaReg.registerVanillaOres();
