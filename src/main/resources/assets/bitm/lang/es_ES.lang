@@ -67,6 +67,7 @@ item.nytdust.name=Nyt de Polve
 item.vicedust.name=Vike de Polve
 item.coaldust.name=El polvo de carb—n
 item.euBasicBattery.name=Crystal RE-Battery
+item.emptyEUbasicBattery.name=Crystal RE-Battery
 
 tile.nytore.name=Mineral de Nyt
 tile.viceore.name=Mineral de Vike

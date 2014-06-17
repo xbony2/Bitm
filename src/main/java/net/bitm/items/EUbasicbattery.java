@@ -10,11 +10,12 @@ import net.minecraft.item.ItemStack;
 import ic2.api.item.IElectricItem;
 
 public class EUbasicbattery extends Item implements IElectricItem{
+	int power = 500000;
 	public EUbasicbattery(){
 		super();
 		
 		this.setCreativeTab(creativeTab.bonetabMachines);
-		this.setMaxDamage(500000);
+		this.setMaxDamage(power);
 		this.setMaxStackSize(1);
 	}
 	
@@ -27,15 +28,15 @@ public class EUbasicbattery extends Item implements IElectricItem{
 	}
 
 	public Item getEmptyItem(ItemStack itemStack) {
-		return IC2.eubasicbettery;
+		return IC2.emptyeubasicbattery;
 	}
 
 	public int getMaxCharge(ItemStack itemStack) {
-		return 500000;
+		return power;
 	}
 
 	public int getTier(ItemStack itemStack) {
-		return 3;
+		return 2;
 	}
 
 	public int getTransferLimit(ItemStack itemStack) {
@@ -44,7 +45,7 @@ public class EUbasicbattery extends Item implements IElectricItem{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister register){
-		itemIcon = register.registerIcon("bitm" + ":" + "EUbasicbattery");
+		itemIcon = register.registerIcon("bitm" + ":" + this.getUnlocalizedName());
 	}
 
 }

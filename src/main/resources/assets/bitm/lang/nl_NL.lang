@@ -67,6 +67,7 @@ item.nytdust.name=Nyt Dust
 item.vicedust.name=Vice Dust
 item.coaldust.name=Coal Dust
 item.euBasicBattery.name=Crystal RE-Battery
+item.emptyEUbasicBattery.name=Crystal RE-Battery
 
 tile.nytore.name=Nyt Erts
 tile.viceore.name=Vice Erts
