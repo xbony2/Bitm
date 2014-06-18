@@ -427,16 +427,16 @@ public class bonytechmod{
 	public void postInit(FMLPostInitializationEvent event){
 		FMLLog.info("Bitm is in postInit");
 
-		OreRecipes.overrideStuff(Blocks.cobblestone, new ItemStack(stonedust), 1F);
-		OreRecipes.overrideStuff(Blocks.iron_ore, new ItemStack(irondust), 1F);
-		OreRecipes.overrideStuff(Blocks.diamond_ore, new ItemStack(diamonddust), 1F);
-		OreRecipes.overrideStuff(Blocks.gold_ore, new ItemStack(golddust), 1F);
-		OreRecipes.overrideStuff(Blocks.emerald_ore, new ItemStack(emeralddust), 1F);
-		OreRecipes.overrideStuff(Blocks.lapis_ore, new ItemStack(lapisdust), 1F);
-		OreRecipes.overrideStuff(Blocks.quartz_ore, new ItemStack(quartzdust), 1F);
-		OreRecipes.overrideStuff(nytore, new ItemStack(nytdust), 1F);
-		OreRecipes.overrideStuff(viceore, new ItemStack(vicedust), 1F);
-		OreRecipes.overrideStuff(Blocks.coal_ore, new ItemStack(coaldust), 1F);	 
+		OreRecipes.overrideStuff(Blocks.cobblestone, new ItemStack(stonedust), 0F);
+		OreRecipes.overrideStuff(Blocks.iron_ore, new ItemStack(irondust), 0F);
+		OreRecipes.overrideStuff(Blocks.diamond_ore, new ItemStack(diamonddust), 0F);
+		OreRecipes.overrideStuff(Blocks.gold_ore, new ItemStack(golddust), 0F);
+		OreRecipes.overrideStuff(Blocks.emerald_ore, new ItemStack(emeralddust), 0F);
+		OreRecipes.overrideStuff(Blocks.lapis_ore, new ItemStack(lapisdust), 0F);
+		OreRecipes.overrideStuff(Blocks.quartz_ore, new ItemStack(quartzdust), 0F);
+		OreRecipes.overrideStuff(nytore, new ItemStack(nytdust), 0F);
+		OreRecipes.overrideStuff(viceore, new ItemStack(vicedust), 0F);
+		OreRecipes.overrideStuff(Blocks.coal_ore, new ItemStack(coaldust), 0F);	 
 		
 	}
 	
