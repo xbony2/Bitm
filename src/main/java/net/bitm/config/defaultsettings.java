@@ -8,9 +8,6 @@ public class defaultsettings {
 	public static int bquartzonoff;
 	public static final int bquartzon = 1;
 	
-	public static int alternetcreativemenuonoff;
-	public static final int alternetcreativemenuoff = 1;
-	
 	public static int furnacespeed;
 	public static final int defaultfurnacespeed = 100;
 	

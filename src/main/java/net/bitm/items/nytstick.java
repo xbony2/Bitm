@@ -15,11 +15,7 @@ public class nytstick extends Item{
 		super();
 		
 		this.maxStackSize = 64;
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabMaterials);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabMaterials);
-		}
 		this.setUnlocalizedName("stickinyt");
 	}
 	

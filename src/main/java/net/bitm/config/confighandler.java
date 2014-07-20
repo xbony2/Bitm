@@ -13,7 +13,6 @@ public class confighandler {
 		
 		defaultsettings.bemeraldonoff = config.get("Settings", "Put to 0 if another mod adds emerald tools", defaultsettings.bemeraldon).getInt();
 		defaultsettings.bquartzonoff = config.get("Settings", "Put to 0 if another mod adds quartz tools", defaultsettings.bquartzon).getInt();
-		defaultsettings.alternetcreativemenuonoff = config.get("Settings", "Put to 0 for the alternate creative tab", defaultsettings.alternetcreativemenuoff).getInt();
 		defaultsettings.furnacespeed = config.get("Settings", "Adjusts the nytrogenic furnace speed, do NOT make it a decimal or fraction", defaultsettings.defaultfurnacespeed).getInt();
 		defaultsettings.ironfurnacespeed = config.get("Settings", "Adjusts the iron furnace speed, do NOT make it a decimal or fraction", defaultsettings.defaultironfurnacespeed).getInt();
 		defaultsettings.bonyiumregistered = config.get("Settings", "Put to 0 to disable bonyium ingot from registering in the oredictionary, in case a mod does something silly with it", defaultsettings.bonyiumdefaulton).getInt();		

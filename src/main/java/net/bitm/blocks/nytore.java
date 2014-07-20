@@ -21,11 +21,7 @@ public class nytore extends Block{
 		this.setStepSound(soundTypeStone);
 		this.setResistance(5);
 		this.setBlockName("nytore");
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabBlock);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabTools);
-		}
 		
 	}
 

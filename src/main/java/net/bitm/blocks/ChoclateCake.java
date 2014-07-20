@@ -62,7 +62,7 @@ public class ChoclateCake extends Block{
         float f = 0.0625F;
         float f1 = (float)(1 + l * 2) / 16.0F;
         float f2 = 0.5F;
-        return AxisAlignedBB.getAABBPool().getAABB((double)((float)x + f1), (double)y, (double)((float)z + f), (double)((float)(x + 1) - f), (double)((float)y + f2 - f), (double)((float)(z + 1) - f));
+        return AxisAlignedBB.getBoundingBox((double)((float)x + f1), (double)y, (double)((float)z + f), (double)((float)(x + 1) - f), (double)((float)y + f2 - f), (double)((float)(z + 1) - f));
     }
 
     /**
@@ -74,7 +74,8 @@ public class ChoclateCake extends Block{
         float f = 0.0625F;
         float f1 = (float)(1 + l * 2) / 16.0F;
         float f2 = 0.5F;
-        return AxisAlignedBB.getAABBPool().getAABB((double)((float)x + f1), (double)y, (double)((float)z + f), (double)((float)(x + 1) - f), (double)((float)y + f2), (double)((float)(z + 1) - f));
+        //return AxisAlignedBB.getAABBPool().getAABB((double)((float)x + f1), (double)y, (double)((float)z + f), (double)((float)(x + 1) - f), (double)((float)y + f2), (double)((float)(z + 1) - f));
+        return AxisAlignedBB.getBoundingBox((double)((float)x + f1), (double)y, (double)((float)z + f), (double)((float)(x + 1) - f), (double)((float)y + f2), (double)((float)(z + 1) - f));
     }
 
 

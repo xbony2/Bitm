@@ -22,13 +22,10 @@ public class clearglass extends Block{
 		this.setHardness(0.3F);
 		this.setStepSound(soundTypeGlass);
 		this.setBlockName("clearglass");
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabBlock);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabDeco);
 		}
 		
-	}
+	
 	public boolean isOpaqueCube(){
 		return false;
 	}

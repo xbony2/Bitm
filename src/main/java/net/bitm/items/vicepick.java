@@ -15,11 +15,7 @@ public class vicepick extends ItemPickaxe{
 		super(par2ToolMaterial);
 		
 		this.maxStackSize = 1;
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabTools);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabTools);
-		}
 		this.setUnlocalizedName("vicepick");
 	}
 	@Override

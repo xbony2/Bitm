@@ -15,8 +15,6 @@ public class creativeTab {
 		public static CreativeTabs bonetabDeco;
 	
 	public static void registerCreativeTabs(){
-		
-		if(defaultsettings.alternetcreativemenuonoff == 0){
 
 			bonetabTools = new CreativeTabs("Bonyindustiraltechtools"){
 				@SideOnly(Side.CLIENT)
@@ -49,6 +47,5 @@ public class creativeTab {
 				return bonytechmod.basicbattery; 
 			}
 		};*/
-		}
 	}
 }

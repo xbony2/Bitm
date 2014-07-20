@@ -22,12 +22,7 @@ public class irongravel extends BlockFalling{
 		this.setStepSound(soundTypeGravel);
 		this.setResistance(2);
 		this.setBlockName("irongravel");
-		
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabBlock);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabMaterials);
-		}
 	
 	}
 	

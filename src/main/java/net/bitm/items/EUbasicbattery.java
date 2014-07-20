@@ -14,7 +14,6 @@ public class EUbasicbattery extends Item implements IElectricItem{
 	public EUbasicbattery(){
 		super();
 		
-		this.setCreativeTab(creativeTab.bonetabMachines);
 		this.setMaxDamage(power);
 		this.setMaxStackSize(1);
 	}
@@ -31,7 +30,7 @@ public class EUbasicbattery extends Item implements IElectricItem{
 		return IC2.emptyeubasicbattery;
 	}
 
-	public int getMaxCharge(ItemStack itemStack) {
+	public double getMaxCharge(ItemStack itemStack) {
 		return power;
 	}
 
@@ -39,7 +38,7 @@ public class EUbasicbattery extends Item implements IElectricItem{
 		return 2;
 	}
 
-	public int getTransferLimit(ItemStack itemStack) {
+	public double getTransferLimit(ItemStack itemStack) {
 		return 1152;
 	}
 	

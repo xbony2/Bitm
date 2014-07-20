@@ -22,17 +22,9 @@ public class viceblock extends Block{
 		this.setStepSound(soundTypeStone);
 		this.setResistance(5);
 		this.setBlockName("viceblock");
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabBlock);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabTools);
-		}
 		
 	}
-	
-	@SideOnly(Side.CLIENT)
-	private IIcon toptexture;
-	private IIcon bottomtexture;
 	
 	public Item getItemDropped(int par1, Random random, int par2){
 		return Item.getItemFromBlock(bonytechmod.viceblock);
@@ -40,20 +32,12 @@ public class viceblock extends Block{
 	
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister register){
-		this.blockIcon = register.registerIcon("bitm" + ":" + "viceblockside");
-		this.toptexture = register.registerIcon("bitm" + ":" + "viceblocktop");
-		this.bottomtexture = register.registerIcon("bitm" + ":" + "viceblockbottom");
+		this.blockIcon = register.registerIcon("bitm" + ":" + "vice_block");
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta){
-		
-		switch(side){
-		case 0: return this.bottomtexture;
-		case 1: return this.toptexture;
-		default: return this.blockIcon;
-		
-		}
+		return this.blockIcon;
 	}
 	
 }

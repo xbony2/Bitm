@@ -22,11 +22,7 @@ public class machineblock extends Block{
 		this.setStepSound(soundTypeMetal);
 		this.setResistance(5);
 		this.setBlockName("machineblock");
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabDecorations);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabMachines);
-		}
 	}
 	
 	public Item getItemDropped(int par1, Random random, int par2){

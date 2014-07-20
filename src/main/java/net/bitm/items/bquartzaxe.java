@@ -14,12 +14,7 @@ public class bquartzaxe extends ItemAxe{
 	public bquartzaxe(ToolMaterial par2ToolMaterial){
 		super(par2ToolMaterial);
 		this.maxStackSize = 1;
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabTools);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabTools);
-		}
-
 		this.setUnlocalizedName("bquartzaxe");
 	}
 	@SideOnly(Side.CLIENT)

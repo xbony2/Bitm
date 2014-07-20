@@ -43,7 +43,7 @@ public class furnacenyt extends BlockContainer{
 	
 		@SideOnly(Side.CLIENT)
 		public void registerBlockIcons(IIconRegister register){
-			this.blockIcon = register.registerIcon("bitm" + ":" + "nytblocktop");
+			this.blockIcon = register.registerIcon("bitm" + ":" + "nyt_block");
 			this.iconfront = register.registerIcon("bitm" + ":" + (this.isactive ? "nytfurnacefrontlit" : "nytfurnacefrontunlit"));
 		}
 		

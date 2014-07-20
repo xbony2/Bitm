@@ -21,12 +21,7 @@ public class viceore extends Block{
 		this.setStepSound(soundTypeStone);
 		this.setResistance(5);
 		this.setBlockName("viceore");
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabBlock);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabTools);
-		}
-		
 	}
 
 	public Item getItemDropped(int par1, Random random, int par2){

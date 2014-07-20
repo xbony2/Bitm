@@ -14,12 +14,7 @@ public class bquartzpick extends ItemPickaxe{
 	public bquartzpick(ToolMaterial par2ToolMaterial) {
 		super(par2ToolMaterial);
 		this.maxStackSize = 1;
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabTools);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabTools);
-		}
-
 		this.setUnlocalizedName("bquartzpickaxe");
 
 	}

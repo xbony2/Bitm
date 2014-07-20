@@ -15,11 +15,7 @@ public class itembasicbattery extends Item{
 		super();
 		
 		this.maxStackSize = 1;
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabMisc);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabMachines);
-		}
 		this.setUnlocalizedName("basicbattery");
 		this.setMaxDamage(defaultenergy.BASICBATTERYBOOS);
 		

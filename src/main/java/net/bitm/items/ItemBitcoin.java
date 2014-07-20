@@ -13,11 +13,7 @@ public class ItemBitcoin extends Item{
 		super();
 
 		this.maxStackSize = 16;
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabMaterials);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabMaterials);
-		}
 		
 	}
 	

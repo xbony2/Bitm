@@ -25,11 +25,7 @@ public class chromeglass extends Block{
 		this.setStepSound(soundTypeGlass);
 		this.setResistance(5);
 		this.setBlockName("chromeglass");
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabBlock);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabDeco);
-		}
 		this.setLightLevel(1);
 		
 	}

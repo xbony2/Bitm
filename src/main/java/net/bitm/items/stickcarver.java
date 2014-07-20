@@ -17,11 +17,7 @@ public class stickcarver extends Item{
 		super();
 		
 		this.maxStackSize = 1;
-		if(defaultsettings.alternetcreativemenuonoff == 0){
-			this.setCreativeTab(CreativeTabs.tabTools);
-		}else{
 		this.setCreativeTab(creativeTab.bonetabMachines);
-		}
 		this.setUnlocalizedName("stickcarver");
 		this.setNoRepair();
 		this.setMaxDamage(30);

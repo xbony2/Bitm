@@ -332,11 +332,11 @@ public class bonytechmod{
 		plankWhite = new ColoredPlanks().setBlockName("whitePlanks");
 		plankYellow = new ColoredPlanks().setBlockName("yellowPlanks");
 		
-		furnacenytidle = new furnacenyt(false).setCreativeTab(defaultsettings.alternetcreativemenuonoff == 1 ? creativeTab.bonetabMachines : CreativeTabs.tabDecorations).setHardness(3.5F).setResistance(5F).setBlockName("furnacenytidle");
+		furnacenytidle = new furnacenyt(false).setCreativeTab(creativeTab.bonetabMachines).setHardness(3.5F).setResistance(5F).setBlockName("furnacenytidle");
 		furnacenytactive = new furnacenyt(true).setLightLevel(1).setHardness(3.5F).setResistance(5F).setBlockName("furnacenytactive");
-		furnaceironidle = new furnaceiron(false).setCreativeTab(defaultsettings.alternetcreativemenuonoff == 1 ? creativeTab.bonetabMachines : CreativeTabs.tabDecorations).setHardness(3.5F).setResistance(5F).setBlockName("furnaceironidle");
+		furnaceironidle = new furnaceiron(false).setCreativeTab(creativeTab.bonetabMachines).setHardness(3.5F).setResistance(5F).setBlockName("furnaceironidle");
 		furnaceironactive = new furnaceiron(true).setLightLevel(1).setHardness(3.5F).setResistance(5F).setBlockName("furnaceironactive");
-		tritnytidle = new tritnyt(false).setCreativeTab(defaultsettings.alternetcreativemenuonoff == 1 ? creativeTab.bonetabMachines : CreativeTabs.tabDecorations).setHardness(3.5F).setResistance(5F).setBlockName("tritnytidle");
+		tritnytidle = new tritnyt(false).setCreativeTab(creativeTab.bonetabMachines).setHardness(3.5F).setResistance(5F).setBlockName("tritnytidle");
 		tritnytactive = new tritnyt(true).setLightLevel(1).setHardness(3.5F).setResistance(5F).setBlockName("tritnytactive");
 		
 		GameRegistry.registerBlock(nytore, "nytore");
