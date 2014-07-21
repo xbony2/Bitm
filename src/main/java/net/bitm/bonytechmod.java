@@ -82,7 +82,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "bitm", name = "BIT mod!", version = "1.1.0a") 
+@Mod(modid = "bitm", name = "Bitm", version = "1.1.0a") 
 //, dependencies = "required-after:IC2" (if needed later)
 public class bonytechmod{
 	
