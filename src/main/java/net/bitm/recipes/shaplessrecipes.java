@@ -22,8 +22,6 @@ public class shaplessrecipes {
 		GameRegistry.addShapelessRecipe(new ItemStack(Items.diamond, 5), new Object[]{
 			new ItemStack(bonytechmod.diamondbitcoin)});
 		
-		GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.bonyiumingot, 2), new Object[]{
-			new ItemStack(Items.iron_ingot), new ItemStack(Items.bone), new ItemStack(Items.coal)});
 		//TEMP. RECIPE DOWN THERE
 		GameRegistry.addShapelessRecipe(new ItemStack(bonytechmod.irongravel), new Object[]{
 			new ItemStack(Items.iron_ingot), new ItemStack(Blocks.gravel)});

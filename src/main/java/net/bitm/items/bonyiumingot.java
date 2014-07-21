@@ -12,7 +12,7 @@ public class bonyiumingot extends Item{
 		super();
 		
 		this.maxStackSize = 64;
-		this.setUnlocalizedName("ingotbonyium,");
+		this.setUnlocalizedName("ingotbonyium");
 		
 	}
 	

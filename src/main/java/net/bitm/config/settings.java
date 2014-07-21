@@ -1,6 +1,6 @@
 package net.bitm.config;
 
-public class defaultsettings {
+public class settings {
 
 	public static int bemeraldonoff;
 	public static final int bemeraldon = 1;
@@ -17,13 +17,10 @@ public class defaultsettings {
 	public static int tritspeed;
 	public static final int tritspeeddefault = 400;
 	
-	public static int bonyiumregistered;
-	public static final int bonyiumdefaulton = 1;
+	public static boolean GTsupport;
 	
-	public static int GTsupport;
-	public static final int GTsupporton = 1;
+	public static boolean IC2support;
 	
-	public static int IC2support;
-	public static final int IC2supporton = 1;
+	public static boolean riovSuport;
 	
 }

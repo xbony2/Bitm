@@ -1,7 +1,7 @@
 package net.bitm.oredict;
 
 import net.bitm.bonytechmod;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.minecraft.init.Items;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -56,7 +56,6 @@ public class BitReg {
 		OreDictionary.registerOre("rodNyt", bonytechmod.nytstick);
 		OreDictionary.registerOre("rodVice", bonytechmod.vicestick);
 		OreDictionary.registerOre("flintIron", bonytechmod.ironflint);
-		if(defaultsettings.bonyiumregistered == 1) OreDictionary.registerOre("ingotBonyium", bonytechmod.bonyiumingot);
 		OreDictionary.registerOre("dustCobblestone", bonytechmod.stonedust);
 		OreDictionary.registerOre("dustIron", bonytechmod.irondust);
 		OreDictionary.registerOre("dustDiamond", bonytechmod.diamonddust);

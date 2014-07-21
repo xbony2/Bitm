@@ -3,7 +3,7 @@ package net.bitm.items;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.bitm.creativeTab;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

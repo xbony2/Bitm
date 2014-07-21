@@ -2,7 +2,7 @@ package net.bitm.blocks;
 //Poopyfaces D:
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -30,7 +30,7 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 	
 	private ItemStack[] slots = new ItemStack[3];
 	
-	public int furnaceSpeed = defaultsettings.ironfurnacespeed;
+	public int furnaceSpeed = settings.ironfurnacespeed;
 	//Sexy settings right here ^ :D
 	public int burnTime;
 	

@@ -2,7 +2,7 @@ package net.bitm.items;
 
 import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IIconRegister;

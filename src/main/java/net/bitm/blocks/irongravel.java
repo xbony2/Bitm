@@ -4,7 +4,7 @@ import java.util.Random;
 
 import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.minecraft.block.BlockFalling;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;

@@ -2,7 +2,7 @@ package net.bitm.items;
 
 import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemSpade;
@@ -23,10 +23,5 @@ public class nytspade extends ItemSpade{
 	public void registerIcons(IIconRegister register){
 		itemIcon = register.registerIcon("bitm" + ":" + "nytspade");
 	}
-
-	@SideOnly(Side.CLIENT)
-	public boolean hasEffect(ItemStack par1ItemStack){
-	    return true;
-	    }
 	
 }

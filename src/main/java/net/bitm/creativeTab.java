@@ -1,6 +1,6 @@
 package net.bitm;
 
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import cpw.mods.fml.relauncher.Side;

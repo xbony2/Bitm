@@ -1,7 +1,7 @@
 package net.bitm.recipes;
 
 import net.bitm.bonytechmod;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
@@ -80,7 +80,7 @@ public class toolrecipes {
 			" s ",
 			" s ", 'v', "gemVice", 's', "stickWood"}));
 		
-if(defaultsettings.bemeraldonoff == 1){
+if(settings.bemeraldonoff == 1){
 			
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(bonytechmod.axebemerald), new Object[]{
 				"ee ",
@@ -118,7 +118,7 @@ if(defaultsettings.bemeraldonoff == 1){
 				" s ", 'e', "gemEmerald", 's', "stickWood"}));
 		}
 		
-		if(defaultsettings.bquartzonoff == 1){
+		if(settings.bquartzonoff == 1){
 			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(bonytechmod.axebquartz), new Object[]{
 				"qq ",
 				"qs ", 

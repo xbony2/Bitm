@@ -15,7 +15,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 
 public class chromeglass extends Block{
 	public chromeglass (Material material){

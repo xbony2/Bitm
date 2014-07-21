@@ -1,7 +1,7 @@
 package net.bitm.blocks;
 // #Yolo
 import net.bitm.bonytechmod;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -33,7 +33,7 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 	/**
 	 * Determens furnace speed, as an int
 	 */
-	public int furnaceSpeed = defaultsettings.furnacespeed;
+	public int furnaceSpeed = settings.furnacespeed;
 	
 	/**
 	 * Energy held in the furnace

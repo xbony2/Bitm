@@ -1,7 +1,7 @@
 package net.bitm.blocks;
 // #Yolo
 import net.bitm.bonytechmod;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.bitm.gui.OreRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
@@ -35,7 +35,7 @@ public class TileEntityNytTrit extends TileEntity implements ISidedInventory{
 	/**
 	 * Determens triturator speed, as an int
 	 */
-	public int tritSpeed = defaultsettings.tritspeed;
+	public int tritSpeed = settings.tritspeed;
 	
 	/**
 	 * Energy held in the furnace

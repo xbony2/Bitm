@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.bitm.bonytechmod;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.bitm.items.itembasicbattery;
 import cpw.mods.fml.common.registry.GameRegistry;
 

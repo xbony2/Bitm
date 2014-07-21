@@ -17,7 +17,7 @@ import net.bitm.blocks.tritnyt;
 import net.bitm.blocks.viceblock;
 import net.bitm.blocks.viceore;
 import net.bitm.config.confighandler;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.bitm.events.ironFurnaceEvent;
 import net.bitm.events.machineblockEvent;
 import net.bitm.events.nytFurnaceEvent;
@@ -128,7 +128,6 @@ public class bonytechmod{
 	public static Item nytstick;
 	public static Item vicestick;
 	public static Item ironflint;
-	public static Item bonyiumingot;
 	public static Item emeraldbitcoin;
 	public static Item stonedust;
 	public static Item irondust;
@@ -241,7 +240,6 @@ public class bonytechmod{
 		nytstick = new nytstick();
 		vicestick = new ItemRod().setUnlocalizedName("vicestick");
 		ironflint = new ironflint();
-		bonyiumingot = new bonyiumingot();
 		emeraldbitcoin = new ItemBitcoin().setUnlocalizedName("emeraldbitcoin");
 		stonedust = new ItemDust().setUnlocalizedName("stonedust");
 		irondust = new ItemDust().setUnlocalizedName("irondust");
@@ -293,7 +291,6 @@ public class bonytechmod{
 		GameRegistry.registerItem(nytstick, "nytstick");
 		GameRegistry.registerItem(vicestick, "vicestick");
 		GameRegistry.registerItem(ironflint, "ironflint");
-		GameRegistry.registerItem(bonyiumingot, "bonyiumingot");
 		GameRegistry.registerItem(emeraldbitcoin, "emeraldbitcoin");
 		GameRegistry.registerItem(stonedust, "stonedust");
 		GameRegistry.registerItem(irondust, "irondust");

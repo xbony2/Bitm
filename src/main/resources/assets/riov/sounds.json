@@ -1,0 +1,72 @@
+{
+ "portal": {
+  "category":"master","sounds": [{
+    "name":
+      "portal",
+      "stream": false
+    }]
+  },
+ "bow": {
+  "category":"master","sounds": [{
+    "name":
+      "bow",
+      "stream": false
+    }]
+  },
+ "demon": {
+  "category":"master","sounds": [{
+    "name":
+      "demon",
+      "stream": false
+    }]
+  },
+ "hellhound": {
+  "category":"master","sounds": [{
+    "name":
+      "hellhound",
+      "stream": false
+    }]
+  },
+ "auntun": {
+  "category":"master","sounds": [{
+    "name":
+      "auntun",
+      "stream": false
+    }]
+  },
+ "growl": {
+  "category":"master","sounds": [{
+    "name":
+      "growl",
+      "stream": false
+    }]
+  },
+ "darkness": {
+  "category":"master","sounds": [{
+    "name":
+      "darkness",
+      "stream": false
+    }]
+  },
+ "exhale": {
+  "category":"master","sounds": [{
+    "name":
+      "exhale",
+      "stream": false
+    }]
+  },
+ "hello": {
+  "category":"master","sounds": [{
+    "name":
+      "hello",
+      "stream": false
+    }]
+  },
+ "pain": {
+  "category":"master","sounds": [{
+    "name":
+      "pain",
+      "stream": false
+    }]
+  }
+}

@@ -2,7 +2,7 @@ package net.bitm.items;
 
 import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.defaultsettings;
+import net.bitm.config.settings;
 import net.bitm.powermanagement.defaultenergy;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
