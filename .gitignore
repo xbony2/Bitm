@@ -15,5 +15,5 @@ hs_err_pid*
 .DS_Store
 
 #Other mods
-src.main.java.sheenrox82/
-src.main.resources.assets.riov/
+src/main/java/sheenrox82/
+src/main/resources/assets/riov/
