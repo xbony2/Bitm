@@ -2,7 +2,6 @@ package net.bitm.modInt;
 
 import ic2.api.item.IC2Items;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
 import net.bitm.items.EUbasicbattery;
 import net.minecraft.item.Item;

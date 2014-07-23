@@ -1,10 +1,7 @@
 package net.bitm.items;
 
-import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.settings;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemAxe;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -18,6 +15,7 @@ public class bemeraldaxe extends ItemAxe {
 		this.setUnlocalizedName("bemeraldaxe");
 
 	}
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister register){
 		itemIcon = register.registerIcon("bitm" + ":" + "bemeraldaxe");

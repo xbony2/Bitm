@@ -2,7 +2,6 @@ package net.bitm.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.bitm.blocks.TileEntityNytFurnace;
 import net.bitm.blocks.TileEntityNytTrit;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -42,12 +41,14 @@ public class ContainerNytTrit extends Container{
 	}
 	
 	
+	@Override
 	public void addCraftingToCrafters(ICrafting icrafting){
 		super.addCraftingToCrafters(icrafting);
 		icrafting.sendProgressBarUpdate(this, 0, this.nytTrit.triturationTime);
 		icrafting.sendProgressBarUpdate(this, 1, this.nytTrit.boos);
 	}
 	
+	@Override
 	public void detectAndSendChanges(){
 		super.detectAndSendChanges();
 		
@@ -68,6 +69,7 @@ public class ContainerNytTrit extends Container{
 		
 	}
 	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void updateProgressBar(int slot, int newValue){
 		if(slot == 0) this.nytTrit.triturationTime = newValue;
@@ -75,6 +77,7 @@ public class ContainerNytTrit extends Container{
 		
 	}	
 	
+	@Override
 	public ItemStack transferStackInSlot(EntityPlayer player, int clickedSlotNumber){
 		ItemStack itemstack = null;
 		Slot slot = (Slot)this.inventorySlots.get(clickedSlotNumber);
@@ -131,6 +134,7 @@ public class ContainerNytTrit extends Container{
 	
 	
 	
+	@Override
 	public boolean canInteractWith(EntityPlayer entityplayer){
 		return this.nytTrit.isUseableByPlayer(entityplayer);
 	}

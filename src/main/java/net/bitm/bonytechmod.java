@@ -2,9 +2,13 @@ package net.bitm;
 
 import net.bitm.blocks.ChoclateCake;
 import net.bitm.blocks.ColoredPlanks;
+import net.bitm.blocks.ItemNytWindmill;
+import net.bitm.blocks.NytWindmill;
+import net.bitm.blocks.NytWindmillGround;
 import net.bitm.blocks.TileEntityIronFurnace;
 import net.bitm.blocks.TileEntityNytFurnace;
 import net.bitm.blocks.TileEntityNytTrit;
+import net.bitm.blocks.TileEntityNytWindmill;
 import net.bitm.blocks.chromeglass;
 import net.bitm.blocks.clearglass;
 import net.bitm.blocks.furnaceiron;
@@ -17,7 +21,6 @@ import net.bitm.blocks.tritnyt;
 import net.bitm.blocks.viceblock;
 import net.bitm.blocks.viceore;
 import net.bitm.config.confighandler;
-import net.bitm.config.settings;
 import net.bitm.events.ironFurnaceEvent;
 import net.bitm.events.machineblockEvent;
 import net.bitm.events.nytFurnaceEvent;
@@ -34,7 +37,6 @@ import net.bitm.items.bemeraldhoe;
 import net.bitm.items.bemeraldpick;
 import net.bitm.items.bemeraldspade;
 import net.bitm.items.bemeraldsword;
-import net.bitm.items.bonyiumingot;
 import net.bitm.items.bquartzaxe;
 import net.bitm.items.bquartzhoe;
 import net.bitm.items.bquartzpick;
@@ -58,12 +60,12 @@ import net.bitm.items.vicespade;
 import net.bitm.items.vicesword;
 import net.bitm.oredict.BitReg;
 import net.bitm.oredict.vanillaReg;
+import net.bitm.proxies.CommonProxy;
 import net.bitm.recipes.shapedrecipes;
 import net.bitm.recipes.shaplessrecipes;
 import net.bitm.recipes.smelting;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
@@ -76,6 +78,7 @@ import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -171,6 +174,12 @@ public class bonytechmod{
 	public static Block plankRed;
 	public static Block plankWhite;
 	public static Block plankYellow;
+	public static Block nytWindmill;
+	public static Item itemNytWindmill;
+	public static Block nytWindmillGround;
+	
+	@SidedProxy(clientSide ="net.bitm.proxies.ClientProxy", serverSide = "net.bitm.proxies.CommonProxy")
+	public static CommonProxy proxy;
 	
 	public static ToolMaterial toolMaterialNyt;
 	public static ToolMaterial toolMaterialVice;
@@ -335,6 +344,9 @@ public class bonytechmod{
 		furnaceironactive = new furnaceiron(true).setLightLevel(1).setHardness(3.5F).setResistance(5F).setBlockName("furnaceironactive");
 		tritnytidle = new tritnyt(false).setCreativeTab(creativeTab.bonetabMachines).setHardness(3.5F).setResistance(5F).setBlockName("tritnytidle");
 		tritnytactive = new tritnyt(true).setLightLevel(1).setHardness(3.5F).setResistance(5F).setBlockName("tritnytactive");
+		nytWindmill = new NytWindmill(Material.rock);
+		itemNytWindmill = new ItemNytWindmill();
+		nytWindmillGround = new NytWindmillGround(Material.rock);
 		
 		GameRegistry.registerBlock(nytore, "nytore");
 		GameRegistry.registerBlock(viceore, "viceore");
@@ -367,6 +379,9 @@ public class bonytechmod{
 		GameRegistry.registerBlock(plankRed, "plankRed");
 		GameRegistry.registerBlock(plankWhite, "plankWhite");
 		GameRegistry.registerBlock(plankYellow, "plankYellow");
+		GameRegistry.registerBlock(nytWindmill, "nytWindmill");
+		GameRegistry.registerItem(itemNytWindmill, "itemNytWindmill");
+		GameRegistry.registerBlock(nytWindmillGround, "nytWindmillGround");
 		
 		//Adds stuff to the vanilla Ore Dict
 		vanillaReg.registerVanillaOres();
@@ -386,6 +401,7 @@ public class bonytechmod{
 		GameRegistry.registerTileEntity(TileEntityNytFurnace.class, "tileEntityNytFurnace");
 		GameRegistry.registerTileEntity(TileEntityIronFurnace.class, "tileEntityIronFurnace");
 		GameRegistry.registerTileEntity(TileEntityNytTrit.class, "tileEntityNytTriturator");
+		GameRegistry.registerTileEntity(TileEntityNytWindmill.class, "tileEntityNytWindmill");
 		
 		NetworkRegistry.INSTANCE.registerGuiHandler(this, new guihandler());
 		
@@ -416,8 +432,10 @@ public class bonytechmod{
 		FMLCommonHandler.instance().bus().register(new machineblockEvent());
 		FMLCommonHandler.instance().bus().register(new nytFurnaceEvent());
 		FMLCommonHandler.instance().bus().register(new ironFurnaceEvent());
-		
+
 		new worldgen();
+		
+		proxy.registerProxies();
 	}
 	
 	@EventHandler

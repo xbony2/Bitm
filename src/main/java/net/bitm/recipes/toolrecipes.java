@@ -2,7 +2,6 @@ package net.bitm.recipes;
 
 import net.bitm.bonytechmod;
 import net.bitm.config.settings;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import cpw.mods.fml.common.registry.GameRegistry;

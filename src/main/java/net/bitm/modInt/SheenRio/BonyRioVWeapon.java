@@ -4,10 +4,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.bitm.creativeTab;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.item.Item.ToolMaterial;
-import sheenrox82.RioV.src.api.base.RioVAPI;
 import sheenrox82.RioV.src.api.item.RioVWeapon;
-import sheenrox82.RioV.src.api.util.RioVAPIUtil;
 
 public class BonyRioVWeapon extends RioVWeapon{
 	public float weaponDamage;

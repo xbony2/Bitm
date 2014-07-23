@@ -1,14 +1,9 @@
 package net.bitm.items;
 
-import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.settings;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -24,24 +19,29 @@ public class stickcarver extends Item{
 		
 	}
 	
+	@Override
 	public boolean doesContainerItemLeaveCraftingGrid(ItemStack itemStack){
         return false;
     }
 	
+	@Override
 	public boolean getShareTag(){
         return true;
     }
 	
+	@Override
 	public ItemStack getContainerItem(ItemStack itemStack) {
 		itemStack.setItemDamage(itemStack.getItemDamage() + 1);
 		return itemStack;
 	}
 	
+	@Override
 	public boolean hasContainerItem(){
 		return true;
 	}
 	
-    @SideOnly(Side.CLIENT)
+    @Override
+	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister register){
 		itemIcon = register.registerIcon("bitm" + ":" + "stickcarver");
 	}

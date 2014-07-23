@@ -1,7 +1,6 @@
 package net.bitm.oredict;
 
 import net.bitm.bonytechmod;
-import net.bitm.config.settings;
 import net.minecraft.init.Items;
 import net.minecraftforge.oredict.OreDictionary;
 

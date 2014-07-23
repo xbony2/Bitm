@@ -5,21 +5,16 @@ import java.util.Random;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockDirectional;
-import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
-import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.settings;
 
 public class chromeglass extends Block{
 	public chromeglass (Material material){
-		super(material.glass);
+		super(Material.glass);
 		
 		this.setHardness(1F);
 		this.setStepSound(soundTypeGlass);
@@ -30,10 +25,12 @@ public class chromeglass extends Block{
 		
 	}
 	
+	@Override
 	public boolean isOpaqueCube(){
 		return false;
 	}
 	
+	@Override
 	public boolean renderAsNormalBlock(){
 		return false;
 	}
@@ -44,19 +41,23 @@ public class chromeglass extends Block{
 	private IIcon texture3;
 	private IIcon texture4;
 	
+	@Override
 	public Item getItemDropped(int par1, Random random, int par2){
 		return Item.getItemFromBlock(Blocks.air);
 	}
 	
+	@Override
 	protected boolean canSilkHarvest(){
 		return true;
 	}
 	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public int getRenderBlockPass(){
 		return 1;
 	}
 	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister register){
 		this.texture1 = register.registerIcon("bitm" + ":" + "chrome1");
@@ -67,6 +68,7 @@ public class chromeglass extends Block{
 	
 		
 	}
+	@Override
 	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int side, int meta){
 		

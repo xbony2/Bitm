@@ -3,7 +3,6 @@ package net.bitm;
 import net.bitm.config.settings;
 import net.bitm.modInt.IC2;
 import net.bitm.modInt.SheenRio.RioV;
-import net.minecraft.item.Item;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.Loader;
 

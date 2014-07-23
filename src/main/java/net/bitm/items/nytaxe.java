@@ -1,12 +1,8 @@
 package net.bitm.items;
 
-import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.settings;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemAxe;
-import net.minecraft.item.ItemStack;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 

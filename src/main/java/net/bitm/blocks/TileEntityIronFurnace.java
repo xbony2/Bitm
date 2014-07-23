@@ -38,15 +38,18 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 	
 	public int cookTime;
 	
+	@Override
 	public int getSizeInventory(){
 		return this.slots.length;
 		
 	}
 	
+	@Override
 	public String getInventoryName(){
 		return this.hasCustomInventoryName() ? this.localizedName : "container.ironfurnace";
 	}
 	
+	@Override
 	public boolean hasCustomInventoryName(){
 		return this.localizedName != null && this.localizedName.length() > 0;
 	}
@@ -55,10 +58,12 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 		this.localizedName = displayName;
 	}
 
+	@Override
 	public ItemStack getStackInSlot(int i) {
 		return this.slots[i];
 	}
 
+	@Override
 	public ItemStack decrStackSize(int i, int j) {
 		if(this.slots[i] != null){
 			ItemStack itemstack;
@@ -82,6 +87,7 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 		return null;
 	}
 
+	@Override
 	public ItemStack getStackInSlotOnClosing(int i) {
 		if(this.slots[i] != null){
 			ItemStack itemstack = this.slots[i];
@@ -93,6 +99,7 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 		return null;
 	}
 
+	@Override
 	public void setInventorySlotContents(int i, ItemStack itemstack){
 		this.slots[i] = itemstack;
 		
@@ -101,10 +108,12 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 		}
 	}
 
+	@Override
 	public int getInventoryStackLimit() {
 		return 64;
 	}
 
+	@Override
 	public void readFromNBT(NBTTagCompound nbt){
 		super.readFromNBT(nbt);
 		
@@ -112,7 +121,7 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 		this.slots = new ItemStack[this.getSizeInventory()];
 		
 		for(int i = 0; i < list.tagCount(); i++){
-		NBTTagCompound compound = (NBTTagCompound) list.getCompoundTagAt(i);
+		NBTTagCompound compound = list.getCompoundTagAt(i);
 		byte b = compound.getByte("Slot");
 		
 			if(b >= 0 && b < this.slots.length){
@@ -120,15 +129,16 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 			}
 		}
 		
-		this.burnTime = (int)nbt.getShort("BurnTime");
-		this.cookTime = (int)nbt.getShort("CookTime");
-		this.currentItemBurnTime = (int)nbt.getShort("CurrentBurnTime");
+		this.burnTime = nbt.getShort("BurnTime");
+		this.cookTime = nbt.getShort("CookTime");
+		this.currentItemBurnTime = nbt.getShort("CurrentBurnTime");
 		
 		if(nbt.hasKey("CustomName")){
 			this.localizedName = nbt.getString("CustomName");
 		}
 	}
 	
+	@Override
 	public void writeToNBT(NBTTagCompound nbt){
 		super.writeToNBT(nbt);
 		
@@ -154,15 +164,18 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 		}
 	}
 	
+	@Override
 	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : entityplayer.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
+		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : entityplayer.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D, this.zCoord + 0.5D) <= 64.0D;
 	}
 
+	@Override
 	public void openInventory() {
 		
 	}
 
 
+	@Override
 	public void closeInventory() {
 		
 	}
@@ -171,6 +184,7 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 		return this.burnTime > 0;
 	}
 	
+	@Override
 	public void updateEntity(){
 		boolean flag = this.burnTime > 0;
 		boolean flag1 = false;
@@ -297,19 +311,23 @@ public class TileEntityIronFurnace extends TileEntity implements ISidedInventory
 	}
 	
 
+	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return i == 2 ? false : (i == 1 ? isItemFuel(itemstack) : true);
 	}
 
 
+	@Override
 	public int[] getAccessibleSlotsFromSide(int var1) {
 		return var1 == 0 ? slots_bottom : (var1 == 1 ? slots_top : slots_side);
 	}
 
+	@Override
 	public boolean canInsertItem(int i, ItemStack itemstack, int j) {
 		return this.isItemValidForSlot(i, itemstack);
 	}
 
+	@Override
 	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
 		return j != 0 || i != 1 || itemstack.getItem() == Items.bucket;
 	}

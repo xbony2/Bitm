@@ -1,10 +1,7 @@
 package net.bitm.items;
 
-import net.bitm.bonytechmod;
 import net.bitm.creativeTab;
-import net.bitm.config.settings;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemPickaxe;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -18,6 +15,7 @@ public class bquartzpick extends ItemPickaxe{
 		this.setUnlocalizedName("bquartzpickaxe");
 
 	}
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IIconRegister register){
 		itemIcon = register.registerIcon("bitm" + ":" + "bquartzpickaxe");

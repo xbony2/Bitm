@@ -2,19 +2,12 @@ package net.bitm.blocks;
 // #Yolo
 import net.bitm.bonytechmod;
 import net.bitm.config.settings;
-import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
-import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
-import net.minecraft.item.ItemTool;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
@@ -51,15 +44,18 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 	 */
 	public int cookTime;
 	
+	@Override
 	public int getSizeInventory(){
 		return this.slots.length;
 		
 	}
 	
+	@Override
 	public String getInventoryName(){
 		return this.hasCustomInventoryName() ? this.localizedName : "container.nytfurnace";
 	}
 	
+	@Override
 	public boolean hasCustomInventoryName(){
 		return this.localizedName != null && this.localizedName.length() > 0;
 	}
@@ -72,10 +68,12 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 		this.localizedName = displayName;
 	}
 
+	@Override
 	public ItemStack getStackInSlot(int i) {
 		return this.slots[i];
 	}
 
+	@Override
 	public ItemStack decrStackSize(int i, int j) {
 		if(this.slots[i] != null){
 			ItemStack itemstack;
@@ -99,6 +97,7 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 		return null;
 	}
 
+	@Override
 	public ItemStack getStackInSlotOnClosing(int i) {
 		if(this.slots[i] != null){
 			ItemStack itemstack = this.slots[i];
@@ -110,6 +109,7 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 		return null;
 	}
 
+	@Override
 	public void setInventorySlotContents(int i, ItemStack itemstack){
 		this.slots[i] = itemstack;
 		
@@ -118,10 +118,12 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 		}
 	}
 
+	@Override
 	public int getInventoryStackLimit() {
 		return 64;
 	}
 
+	@Override
 	public void readFromNBT(NBTTagCompound nbt){
 		super.readFromNBT(nbt);
 		
@@ -129,7 +131,7 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 		this.slots = new ItemStack[this.getSizeInventory()];
 		
 		for(int i = 0; i < list.tagCount(); i++){
-		NBTTagCompound compound = (NBTTagCompound) list.getCompoundTagAt(i);
+		NBTTagCompound compound = list.getCompoundTagAt(i);
 		byte b = compound.getByte("Slot");
 		
 			if(b >= 0 && b < this.slots.length){
@@ -137,14 +139,15 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 			}
 		}
 		
-		this.boos = (int)nbt.getShort("Power");
-		this.cookTime = (int)nbt.getShort("CookTime");
+		this.boos = nbt.getShort("Power");
+		this.cookTime = nbt.getShort("CookTime");
 		
 		if(nbt.hasKey("CustomName")){
 			this.localizedName = nbt.getString("CustomName");
 		}
 	}
 	
+	@Override
 	public void writeToNBT(NBTTagCompound nbt){
 		super.writeToNBT(nbt);
 		
@@ -169,8 +172,9 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 		}
 	}
 	
+	@Override
 	public boolean isUseableByPlayer(EntityPlayer entityplayer) {
-		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : entityplayer.getDistanceSq((double)this.xCoord + 0.5D, (double)this.yCoord + 0.5D, (double)this.zCoord + 0.5D) <= 64.0D;
+		return this.worldObj.getTileEntity(this.xCoord, this.yCoord, this.zCoord) != this ? false : entityplayer.getDistanceSq(this.xCoord + 0.5D, this.yCoord + 0.5D, this.zCoord + 0.5D) <= 64.0D;
 	}
 	/**
 	 * Checks if the furnace has power
@@ -187,6 +191,7 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 		return this.cookTime > 0;
 	}
 	
+	@Override
 	public void updateEntity(){
 		boolean flag = this.boos > 0;
 		boolean flag1 = false;
@@ -196,7 +201,7 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 		}
 		
 		if(!this.worldObj.isRemote){
-			if(this.hasItemPower(this.slots[1]) && this.boos <= (this.maxBoos - this.getItemPower(this.slots[1]))){
+			if(TileEntityNytFurnace.hasItemPower(this.slots[1]) && this.boos <= (this.maxBoos - TileEntityNytFurnace.getItemPower(this.slots[1]))){
 				if(!this.slots[1].isItemStackDamageable()){
 				
 				this.boos += getItemPower(this.slots[1]);
@@ -332,19 +337,23 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 		return getItemPower(itemstack) > 0;
 	}
 	
+	@Override
 	public boolean isItemValidForSlot(int i, ItemStack itemstack) {
 		return i == 2 ? false : (i == 1 ? hasItemPower(itemstack) : true);
 	}
 
 
+	@Override
 	public int[] getAccessibleSlotsFromSide(int var1) {
 		return var1 == 0 ? slots_bottom : (var1 == 1 ? slots_top : slots_side);
 	}
 
+	@Override
 	public boolean canInsertItem(int i, ItemStack itemstack, int j) {
 		return this.isItemValidForSlot(i, itemstack);
 	}
 
+	@Override
 	public boolean canExtractItem(int i, ItemStack itemstack, int j) {
 		return j != 0 || i != 1 || itemstack.getItem() == Items.bucket;
 	}
@@ -369,6 +378,7 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 	/**
 	 * This is what happen when you open a GUI
 	 */
+	@Override
 	public void openInventory() {
 		
 	}
@@ -376,6 +386,7 @@ public class TileEntityNytFurnace extends TileEntity implements ISidedInventory{
 	/**
 	 * This is what happen when you close a GUI
 	 */
+	@Override
 	public void closeInventory() {
 		
 	}

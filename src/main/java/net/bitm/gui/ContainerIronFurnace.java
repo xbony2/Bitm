@@ -41,6 +41,7 @@ public class ContainerIronFurnace extends Container{
 	}
 	
 	
+	@Override
 	public void addCraftingToCrafters(ICrafting icrafting){
 		super.addCraftingToCrafters(icrafting);
 		icrafting.sendProgressBarUpdate(this, 0, this.nytFurnace.cookTime);
@@ -48,6 +49,7 @@ public class ContainerIronFurnace extends Container{
 		icrafting.sendProgressBarUpdate(this, 2, this.nytFurnace.currentItemBurnTime);
 	}
 	
+	@Override
 	public void detectAndSendChanges(){
 		super.detectAndSendChanges();
 		
@@ -71,6 +73,7 @@ public class ContainerIronFurnace extends Container{
 		this.lastItemBurnTime = this.nytFurnace.currentItemBurnTime;
 	}
 	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public void updateProgressBar(int slot, int newValue){
 		if(slot == 0) this.nytFurnace.cookTime = newValue;
@@ -78,6 +81,7 @@ public class ContainerIronFurnace extends Container{
 		if(slot == 2) this.nytFurnace.currentItemBurnTime = newValue;
 	}	
 	
+	@Override
 	public ItemStack transferStackInSlot(EntityPlayer player, int clickedSlotNumber){
 		ItemStack itemstack = null;
 		Slot slot = (Slot)this.inventorySlots.get(clickedSlotNumber);
@@ -134,6 +138,7 @@ public class ContainerIronFurnace extends Container{
 	
 	
 	
+	@Override
 	public boolean canInteractWith(EntityPlayer entityplayer){
 		return this.nytFurnace.isUseableByPlayer(entityplayer);
 	}

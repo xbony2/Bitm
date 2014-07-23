@@ -41,6 +41,7 @@ public class furnacenyt extends BlockContainer{
 		this.isactive = isactive;
 	}
 	
+		@Override
 		@SideOnly(Side.CLIENT)
 		public void registerBlockIcons(IIconRegister register){
 			this.blockIcon = register.registerIcon("bitm" + ":" + "nyt_block");
@@ -49,14 +50,17 @@ public class furnacenyt extends BlockContainer{
 		
 		//Something's broken here 
 		//@SideOnly(Side.CLIENT)
+		@Override
 		public IIcon getIcon(int Side, int metadata){
 			return metadata == 0 && Side == 3 ? this.iconfront : (Side == metadata ? this.iconfront : this.blockIcon);
 		}
 		
+		@Override
 		public Item getItemDropped(int par1, Random random, int par2){
 			return Item.getItemFromBlock(bonytechmod.furnacenytidle);
 		}
 		
+		@Override
 		public void onBlockAdded(World world, int x, int y, int z){
 			super.onBlockAdded(world, x, y, z);
 			this.setDefaultDirection(world, x, y, z);
@@ -92,6 +96,7 @@ public class furnacenyt extends BlockContainer{
 			
 		}
 		
+		@Override
 		public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ){
 			if(!world.isRemote){
 				FMLNetworkHandler.openGui(player, bonytechmod.instance, bonytechmod.guiIdNytFurnace, world, x, y, z);
@@ -100,43 +105,46 @@ public class furnacenyt extends BlockContainer{
 			return true;
 		}
 		
+		@Override
 		public TileEntity createNewTileEntity(World world, int i){
 			return new TileEntityNytFurnace();
 		}
 		
+		@Override
 		@SideOnly(Side.CLIENT)
 		public void randomDisplayTick(World world, int x, int y, int z, Random random){
 			if(this.isactive){
 				int direction = world.getBlockMetadata(x, y, z);
 				
-				float x1 = (float)x + 0.5F;
-				float y1 = (float)y + random.nextFloat();
-				float z1 = (float)z + 0.5F;
+				float x1 = x + 0.5F;
+				float y1 = y + random.nextFloat();
+				float z1 = z + 0.5F;
 				
 				float f = 0.52F;
 				float f1 = random.nextFloat() * 0.6F - 0.3F;
 				
 				if(direction == 4){
-					world.spawnParticle("smoke", (double)(x1 - f), (double)y1, (double)(z1 + f1), 0D, 0D, 0D);
-					world.spawnParticle("flame", (double)(x1 - f), (double)y1, (double)(z1 + f1), 0D, 0D, 0D);
+					world.spawnParticle("smoke", x1 - f, y1, z1 + f1, 0D, 0D, 0D);
+					world.spawnParticle("flame", x1 - f, y1, z1 + f1, 0D, 0D, 0D);
 				}else if(direction == 5){
-					world.spawnParticle("smoke", (double)(x1 + f), (double)y1, (double)(z1 + f1), 0D, 0D, 0D);
-					world.spawnParticle("flame", (double)(x1 + f), (double)y1, (double)(z1 + f1), 0D, 0D, 0D);
+					world.spawnParticle("smoke", x1 + f, y1, z1 + f1, 0D, 0D, 0D);
+					world.spawnParticle("flame", x1 + f, y1, z1 + f1, 0D, 0D, 0D);
 				
 				}else if(direction == 2){
-					world.spawnParticle("smoke", (double)(x1 + f1), (double)y1, (double)(z1 - f), 0D, 0D, 0D);
-					world.spawnParticle("flame", (double)(x1 + f1), (double)y1, (double)(z1 - f), 0D, 0D, 0D);
+					world.spawnParticle("smoke", x1 + f1, y1, z1 - f, 0D, 0D, 0D);
+					world.spawnParticle("flame", x1 + f1, y1, z1 - f, 0D, 0D, 0D);
 				
 				}else if(direction == 3){
-					world.spawnParticle("smoke", (double)(x1 + f1), (double)y1, (double)(z1 + f), 0D, 0D, 0D);
-					world.spawnParticle("flame", (double)(x1 + f1), (double)y1, (double)(z1 + f), 0D, 0D, 0D);
+					world.spawnParticle("smoke", x1 + f1, y1, z1 + f, 0D, 0D, 0D);
+					world.spawnParticle("flame", x1 + f1, y1, z1 + f, 0D, 0D, 0D);
 				
 				}
  			}
 		}
 		
+		@Override
 		public void onBlockPlacedBy(World world, int x, int y, int z, EntityLivingBase entityLivingBase, ItemStack itemstack){
-			int l = MathHelper.floor_double((double)(entityLivingBase.rotationYaw * 4.0F / 360.0F) + 0.5D) & 3;
+			int l = MathHelper.floor_double(entityLivingBase.rotationYaw * 4.0F / 360.0F + 0.5D) & 3;
 			
 			if(l == 0){
 				world.setBlockMetadataWithNotify(x, y, z, 2, 2);
@@ -182,6 +190,7 @@ public class furnacenyt extends BlockContainer{
 			
 		}
 		
+		@Override
 		public void breakBlock(World world, int x, int y, int z, Block oldblock, int oldMetaData){
 			if(!keepInventory){
 				TileEntityNytFurnace tileentity = (TileEntityNytFurnace) world.getTileEntity(x, y, z);
@@ -205,16 +214,16 @@ public class furnacenyt extends BlockContainer{
 								
 								itemstack.stackSize -= j;
 								
-								EntityItem item = new EntityItem(world, (double)((float)x + f), (double)((float)y + f1), (double)((float)z + f2), new ItemStack(itemstack.getItem(), j, itemstack.getItemDamage()));
+								EntityItem item = new EntityItem(world, x + f, y + f1, z + f2, new ItemStack(itemstack.getItem(), j, itemstack.getItemDamage()));
 								
 								if(itemstack.hasTagCompound()){
 									item.getEntityItem().setTagCompound((NBTTagCompound)itemstack.getTagCompound().copy());
 								}
 							
 								float f3 = 0.05F;
-								item.motionX = (double)((float)this.rand.nextGaussian() * f3);
-								item.motionY = (double)((float)this.rand.nextGaussian() * f3 + 0.2F);
-								item.motionZ = (double)((float)this.rand.nextGaussian()* f3);
+								item.motionX = (float)this.rand.nextGaussian() * f3;
+								item.motionY = (float)this.rand.nextGaussian() * f3 + 0.2F;
+								item.motionZ = (float)this.rand.nextGaussian()* f3;
 								
 								world.spawnEntityInWorld(item);
 							}
@@ -230,15 +239,18 @@ public class furnacenyt extends BlockContainer{
 			
 		}
 		
+		@Override
 		public boolean hasComparatorInputOverride(){
 			return true;
 			
 		}
 		
+		@Override
 		public int getComparatorInputOverride(World world, int x, int y, int z, int i){
 			return Container.calcRedstoneFromInventory((IInventory)world.getTileEntity(x, y, z));
 		}
 		
+		@Override
 		public Item getItem(World world, int x, int y, int z){
 			return Item.getItemFromBlock(bonytechmod.furnacenytidle);
 		}

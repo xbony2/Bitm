@@ -1,7 +1,6 @@
 package net.bitm.recipes;
 
 import net.bitm.bonytechmod;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

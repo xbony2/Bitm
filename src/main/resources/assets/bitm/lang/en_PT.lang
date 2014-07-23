@@ -69,6 +69,15 @@ item.vicedust.name=Vice Dust
 item.coaldust.name=Coal Dust
 item.euBasicBattery.name=Crystal RE-Battery
 item.emptyEUbasicBattery.name=Crystal RE-Battery
+item.infusedNytSword.name=Infused Nyt Sword
+item.infusedNytAxe.name=Infused Nyt Axe
+item.infusedNytPickaxe.name=Infused Nyt Pickaxe
+item.infusedNytSpade.name=Infused Nyt Spade
+item.infusedViceSword.name=Infused Vice Sword
+item.infusedViceAxe.name=Infused Vice Axe
+item.infusedVicePickaxe.name=Infused Vice Pickaxe
+item.infusedViceSpade.name=Infused Vice Spade
+item.itemNytWindmill.name=Nytrogenic Windmill Core
 
 tile.nytore.name=Purple Demon Orrre
 tile.viceore.name=Green-Blue Demon Orrre
@@ -98,6 +107,7 @@ tile.grayPlanks.name=Gray Wood Planks
 tile.cyanPlanks.name=Cyan Wood Planks
 tile.yellowPlanks.name=Yellow Wood Planks
 tile.pinkPlanks.name=Pink Wood Planks
+tile.nytWindmillGround.name=Nytrogenic Windmill Base
 
 container.nytfurnace=Oven
 container.ironfurnace=Steel Oven

@@ -1,6 +1,5 @@
 package net.bitm;
 
-import net.bitm.config.settings;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import cpw.mods.fml.relauncher.Side;
@@ -17,24 +16,28 @@ public class creativeTab {
 	public static void registerCreativeTabs(){
 
 			bonetabTools = new CreativeTabs("Bonyindustiraltechtools"){
+				@Override
 				@SideOnly(Side.CLIENT)
 				public Item getTabIconItem() {
 					return bonytechmod.picknyt; 
 				}
 			};
 			bonetabMaterials = new CreativeTabs("Bonyindustiraltechmaterials"){
+				@Override
 				@SideOnly(Side.CLIENT)
 				public Item getTabIconItem() {
 					return bonytechmod.diamondbitcoin; 
 				}
 			};
 			bonetabMachines = new CreativeTabs("Bonyindustiraltechmachines"){
+				@Override
 				@SideOnly(Side.CLIENT)
 				public Item getTabIconItem() {
 					return bonytechmod.basicbattery; 
 				}
 			};
 			bonetabDeco = new CreativeTabs("Bonyindustiraltechdeco"){
+				@Override
 				@SideOnly(Side.CLIENT)
 				public Item getTabIconItem() {
 					return Item.getItemFromBlock(bonytechmod.clearglass); 

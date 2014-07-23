@@ -2,13 +2,11 @@ package net.bitm.gui;
 
 import org.lwjgl.opengl.GL11;
 
-import net.bitm.bonytechmod;
 import net.bitm.blocks.TileEntityIronFurnace;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 
 public class GuiIronFurnace extends GuiContainer{
@@ -26,6 +24,7 @@ public class GuiIronFurnace extends GuiContainer{
 		this.ySize = 166;
 	}
 	
+	@Override
 	public void drawGuiContainerForegroundLayer(int par1, int par2){
 		String name = this.ironFurnace.hasCustomInventoryName() ? this.ironFurnace.getInventoryName() : I18n.format(this.ironFurnace.getInventoryName(), new Object[0]);
 		
@@ -33,6 +32,7 @@ public class GuiIronFurnace extends GuiContainer{
 		this.fontRendererObj.drawString(I18n.format("container.inventory"), 8, this.ySize - 96 + 2, 4210752);
 	}
 	
+	@Override
 	public void drawGuiContainerBackgroundLayer(float f, int i, int j) {
 		GL11.glColor4f(1F, 1F, 1F, 1F);
 		
