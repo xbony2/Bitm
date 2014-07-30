@@ -1,7 +1,7 @@
 package net.bitm.proxies;
 
-import net.bitm.blocks.TileEntityNytWindmill;
-import net.bitm.blocks.TileEntityRendererWindmill;
+import net.bitm.tileentity.TileEntityNytWindmill;
+import net.bitm.tileentity.render.TileEntityRendererWindmill;
 import cpw.mods.fml.client.registry.ClientRegistry;
 
 public class ClientProxy extends CommonProxy{

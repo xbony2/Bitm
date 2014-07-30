@@ -1,4 +1,4 @@
-package net.bitm.blocks;
+package net.bitm.tileentity;
 
 import net.minecraft.tileentity.TileEntity;
 

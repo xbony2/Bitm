@@ -1,7 +1,8 @@
-package net.bitm.blocks;
+package net.bitm.tileentity;
 //Poopyfaces D:
 
 import cpw.mods.fml.common.registry.GameRegistry;
+import net.bitm.blocks.furnaceiron;
 import net.bitm.config.settings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

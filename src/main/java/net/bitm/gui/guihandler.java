@@ -1,9 +1,9 @@
 package net.bitm.gui;
 
 import net.bitm.bonytechmod;
-import net.bitm.blocks.TileEntityIronFurnace;
-import net.bitm.blocks.TileEntityNytFurnace;
-import net.bitm.blocks.TileEntityNytTrit;
+import net.bitm.tileentity.TileEntityIronFurnace;
+import net.bitm.tileentity.TileEntityNytFurnace;
+import net.bitm.tileentity.TileEntityNytTrit;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;

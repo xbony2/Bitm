@@ -1,6 +1,7 @@
-package net.bitm.blocks;
+package net.bitm.tileentity;
 // #Yolo
 import net.bitm.bonytechmod;
+import net.bitm.blocks.furnacenyt;
 import net.bitm.config.settings;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;

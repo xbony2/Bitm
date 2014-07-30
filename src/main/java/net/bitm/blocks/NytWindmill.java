@@ -1,6 +1,7 @@
 package net.bitm.blocks;
 
 import net.bitm.creativeTab;
+import net.bitm.tileentity.TileEntityNytWindmill;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;

@@ -2,7 +2,7 @@ package net.bitm.gui;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import net.bitm.blocks.TileEntityNytFurnace;
+import net.bitm.tileentity.TileEntityNytFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;

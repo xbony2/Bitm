@@ -1,4 +1,4 @@
-package net.bitm.blocks;
+package net.bitm.tileentity.render;
 
 import org.lwjgl.opengl.GL11;
 

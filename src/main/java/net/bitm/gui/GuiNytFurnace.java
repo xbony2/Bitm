@@ -2,7 +2,7 @@ package net.bitm.gui;
 
 import org.lwjgl.opengl.GL11;
 
-import net.bitm.blocks.TileEntityNytFurnace;
+import net.bitm.tileentity.TileEntityNytFurnace;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.resources.I18n;
