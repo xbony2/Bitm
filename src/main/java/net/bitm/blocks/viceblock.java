@@ -32,13 +32,7 @@ public class viceblock extends Block{
 	@Override
 	@SideOnly(Side.CLIENT)
 	public void registerBlockIcons(IIconRegister register){
-		this.blockIcon = register.registerIcon("bitm" + ":" + "vice_block");
-	}
-	
-	@Override
-	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int side, int meta){
-		return this.blockIcon;
+		blockIcon = register.registerIcon("bitm" + ":" + "vice_block");
 	}
 	
 }

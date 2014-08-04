@@ -1,4 +1,4 @@
-package net.bitm.modInt;
+package net.bitm.modInt.IC2IC2;
 
 import ic2.api.item.IC2Items;
 import cpw.mods.fml.common.registry.GameRegistry;

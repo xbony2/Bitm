@@ -54,6 +54,7 @@ import net.bitm.items.viceitem;
 import net.bitm.items.vicepick;
 import net.bitm.items.vicespade;
 import net.bitm.items.vicesword;
+import net.bitm.modInt.ModIntergation;
 import net.bitm.oredict.BitReg;
 import net.bitm.oredict.vanillaReg;
 import net.bitm.proxies.CommonProxy;

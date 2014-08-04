@@ -107,6 +107,7 @@ tile.cyanPlanks.name=Cyan Wood Planks
 tile.yellowPlanks.name=Yellow Wood Planks
 tile.pinkPlanks.name=Pink Wood Planks
 tile.nytWindmillGround.name=Nytrogenic Windmill Base
+tile.sheenyBlock.name=Sheeny Block
 
 container.nytfurnace=Horno de Nytrogenica
 container.ironfurnace=Horno de Hierro
