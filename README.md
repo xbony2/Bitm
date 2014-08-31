@@ -1,4 +1,4 @@
 Bitm
 ====
 
-My mod. Code is ONLY to fix bugs and for learning purposess. 
+My mod. Code is provided for educational purposes and bug fixing. 
